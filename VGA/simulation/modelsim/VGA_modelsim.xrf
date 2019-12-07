@@ -1,4 +1,6 @@
 vendor_name = ModelSim
+source_file = 1, /personal/tmhans22/VGA/Keyboard/debounce.vhd
+source_file = 1, /personal/tmhans22/VGA/Keyboard/ps2_keyboard.vhd
 source_file = 1, /personal/tmhans22/VGA/VGA/pll/synthesis/pll.qip
 source_file = 1, /personal/tmhans22/VGA/VGA/pll/synthesis/pll.vhd
 source_file = 1, /personal/tmhans22/VGA/VGA/pll/synthesis/submodules/pll_altpll_0.v

@@ -1,5 +1,5 @@
 Fitter report for VGA
-Sat Dec  7 18:18:52 2019
+Sat Dec  7 18:24:23 2019
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -65,7 +65,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Fitter Summary                                                                 ;
 +------------------------------------+-------------------------------------------+
-; Fitter Status                      ; Successful - Sat Dec  7 18:18:52 2019     ;
+; Fitter Status                      ; Successful - Sat Dec  7 18:24:23 2019     ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; VGA                                       ;
 ; Top-level Entity Name              ; VGA                                       ;
@@ -143,12 +143,13 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 2.71        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-8 processors         ; < 0.1%      ;
+;     2-4 processors         ;  25.0%      ;
+;     5-8 processors         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -2078,7 +2079,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Fitter
     Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
-    Info: Processing started: Sat Dec  7 18:18:47 2019
+    Info: Processing started: Sat Dec  7 18:24:19 2019
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off VGA -c VGA
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (119006): Selected device EP2C20F484C7 for design "VGA"
@@ -2545,9 +2546,9 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /personal/tmhans22/VGA/VGA/output_files/VGA.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 407 warnings
-    Info: Peak virtual memory: 508 megabytes
-    Info: Processing ended: Sat Dec  7 18:18:52 2019
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 506 megabytes
+    Info: Processing ended: Sat Dec  7 18:24:23 2019
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:06
 
 
