@@ -57,7 +57,7 @@ BEGIN
 			DEPRESSED <= '1'; -- a key is being held down
 		END IF;
 	END IF; 
-
+	
 	IF(CLK'EVENT AND CLK='1')THEN
 			IF(DRAW1='1')THEN
 			  IF(S(0)='1')THEN
