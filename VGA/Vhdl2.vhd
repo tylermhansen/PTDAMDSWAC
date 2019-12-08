@@ -31,13 +31,13 @@ COMPONENT ps2_keyboard IS
 	);
 END COMPONENT ps2_keyboard;
 
-COMPONENT player_sprite_straight_updated is
+COMPONENT player_sprite is
 port(
 X	: in INTEGER RANGE 0 TO 1688;
 Y	: in INTEGER RANGE 0 TO 1688;
 data : out std_logic_vector (11 downto 0)
 );
-END COMPONENT player_sprite_straight_updated;
+END COMPONENT player_sprite;
 
 -----1280x1024 @ 60 Hz pixel clock 108 MHz
 SIGNAL RGB: STD_LOGIC_VECTOR(3 downto 0);
@@ -137,6 +137,6 @@ BEGIN
  END PROCESS;
  
  INST1: ps2_keyboard PORT MAP (CLK, KCLK, DATA, KEYBOARDIN, KEYBOARDCODE);
- INST2l: player_sprite_straight_updated PORT MAP (HPOS - CAR_X, VPOS - CAR_Y, CAR_DATA);
+ INST2l: player_sprite PORT MAP (HPOS - CAR_X, VPOS - CAR_Y, CAR_DATA);
  
  END MAIN;
