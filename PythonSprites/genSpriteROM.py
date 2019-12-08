@@ -60,7 +60,7 @@ def main( argv ):
 	while row < num_rows:
 		while col < num_cols:
 			(r, g, b) = src.getPixel(col, row)
-			pixelString = "\"" + dec2bin8(r) + dec2bin8(g) + dec2bin8(b) + "\" when X = \"" + str(row) + "\" AND Y = \"" + str(col) + "\" else"    
+			pixelString = "\"" + dec2bin8(r) + dec2bin8(g) + dec2bin8(b) + "\" when X = \"" + str(col) + "\" AND Y = \"" + str(row) + "\" else"    
 			print (pixelString)
 			col += 1
 		col = 0
