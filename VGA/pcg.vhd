@@ -20,7 +20,7 @@ END SQ;
 
 PROCEDURE CAR(SIGNAL Xcur,Ycur,Xpos,Ypos:IN INTEGER;SIGNAL RGB:OUT STD_LOGIC_VECTOR(3 downto 0);SIGNAL DRAW: OUT STD_LOGIC) IS
 BEGIN
- IF(Xcur>Xpos AND Xcur<(Xpos+232) AND Ycur>Ypos AND Ycur<(Ypos+150))THEN
+ IF(Xcur>Xpos AND Xcur<(Xpos+46) AND Ycur>Ypos AND Ycur<(Ypos+30))THEN
 	 RGB<="1111";
 	 DRAW<='1';
 	 ELSE

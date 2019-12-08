@@ -5,14 +5,14 @@ import sys
 def decimalToBinary(n): 
     return bin(n).replace("0b","") 
 
-# converts d to an 8-bit unsigned binary value
-def dec2bin8(d):
+# converts d to an 4-bit unsigned binary value
+def dec2bin4(d):
     if d > 0:
         l = d.bit_length()
-        v = "00000000"
-        v = v[0:8-l] + format( d, 'b' )
+        v = "0000"
+        v = v[0:4-l] + format( d, 'b' )
     elif d == 0:
-        v = "00000000"
+        v = "0000"
     else:
         print ('Invalid v: value is negative')
         exit()
@@ -60,12 +60,12 @@ def main( argv ):
 	while row < num_rows:
 		while col < num_cols:
 			(r, g, b) = src.getPixel(col, row)
-			pixelString = "\"" + dec2bin8(r) + dec2bin8(g) + dec2bin8(b) + "\" when X = \"" + str(col) + "\" AND Y = \"" + str(row) + "\" else"    
+			pixelString = "\"" + dec2bin4(r/16) + dec2bin4(g/16) + dec2bin4(b/16) + "\" when X = " + str(col) + " AND Y = " + str(row) + " else"    
 			print (pixelString)
 			col += 1
 		col = 0
 		row += 1
-	print ('"000000000000000000000000"; -- should never get here') 
+	print ('"000000000000"; -- should never get here') 
 	print ("end rtl;")
 	f.close()
 
