@@ -3,11 +3,35 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'C|altpll_0|sd1|pll|clk[0]'
-Slack : 2.017
-TNS   : 0.000
+Slack : -5.925
+TNS   : -157.699
+
+Type  : Slow Model Setup 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
+Slack : -1.853
+TNS   : -1.853
+
+Type  : Slow Model Setup 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
+Slack : -0.284
+TNS   : -0.730
+
+Type  : Slow Model Hold 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
+Slack : -1.226
+TNS   : -1.226
+
+Type  : Slow Model Hold 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
+Slack : -0.091
+TNS   : -0.091
 
 Type  : Slow Model Hold 'C|altpll_0|sd1|pll|clk[0]'
-Slack : 0.624
+Slack : 0.080
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
+Slack : -0.611
+TNS   : -13.442
+
+Type  : Slow Model Minimum Pulse Width 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
+Slack : 0.500
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'C|altpll_0|sd1|pll|clk[0]'
@@ -19,11 +43,35 @@ Slack : 20.833
 TNS   : 0.000
 
 Type  : Fast Model Setup 'C|altpll_0|sd1|pll|clk[0]'
-Slack : 6.494
+Slack : -3.212
+TNS   : -80.876
+
+Type  : Fast Model Setup 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
+Slack : -0.378
+TNS   : -0.378
+
+Type  : Fast Model Setup 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
+Slack : 0.451
 TNS   : 0.000
 
+Type  : Fast Model Hold 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
+Slack : -1.365
+TNS   : -1.365
+
+Type  : Fast Model Hold 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
+Slack : -0.302
+TNS   : -0.302
+
 Type  : Fast Model Hold 'C|altpll_0|sd1|pll|clk[0]'
-Slack : 0.240
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
+Slack : -0.500
+TNS   : -11.000
+
+Type  : Fast Model Minimum Pulse Width 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
+Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'C|altpll_0|sd1|pll|clk[0]'

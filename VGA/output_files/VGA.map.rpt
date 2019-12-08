@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Sat Dec  7 18:24:18 2019
+Sat Dec  7 21:07:39 2019
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -14,17 +14,21 @@ Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for pll:C|pll_altpll_0:altpll_0
- 14. Source assignments for pll:C|pll_altpll_0:altpll_0|pll_altpll_0_stdsync_sv6:stdsync2|pll_altpll_0_dffpipe_l2c:dffpipe3
- 15. Parameter Settings for User Entity Instance: pll:C|pll_altpll_0:altpll_0|altpll:sd1
- 16. altpll Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "pll:C|pll_altpll_0:altpll_0"
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for pll:C|pll_altpll_0:altpll_0
+ 15. Source assignments for pll:C|pll_altpll_0:altpll_0|pll_altpll_0_stdsync_sv6:stdsync2|pll_altpll_0_dffpipe_l2c:dffpipe3
+ 16. Parameter Settings for User Entity Instance: pll:C|pll_altpll_0:altpll_0|altpll:sd1
+ 17. Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1
+ 18. Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk
+ 19. Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data
+ 20. altpll Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "pll:C|pll_altpll_0:altpll_0"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -50,16 +54,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                   ;
 +------------------------------------+-------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec  7 18:24:18 2019     ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec  7 21:07:39 2019     ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; VGA                                       ;
 ; Top-level Entity Name              ; VGA                                       ;
 ; Family                             ; Cyclone II                                ;
-; Total logic elements               ; 244                                       ;
-;     Total combinational functions  ; 244                                       ;
-;     Dedicated logic registers      ; 70                                        ;
-; Total registers                    ; 70                                        ;
-; Total pins                         ; 22                                        ;
+; Total logic elements               ; 249                                       ;
+;     Total combinational functions  ; 224                                       ;
+;     Dedicated logic registers      ; 106                                       ;
+; Total registers                    ; 106                                       ;
+; Total pins                         ; 24                                        ;
 ; Total virtual pins                 ; 0                                         ;
 ; Total memory bits                  ; 0                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                         ;
@@ -174,6 +178,8 @@ applicable agreement for further details.
 +-----------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path        ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
 +-----------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; ../Keyboard/debounce.vhd                ; yes             ; User VHDL File         ; /personal/tmhans22/VGA/Keyboard/debounce.vhd                              ;         ;
+; ../Keyboard/ps2_keyboard.vhd            ; yes             ; User VHDL File         ; /personal/tmhans22/VGA/Keyboard/ps2_keyboard.vhd                          ;         ;
 ; pll/synthesis/pll.vhd                   ; yes             ; User VHDL File         ; /personal/tmhans22/VGA/VGA/pll/synthesis/pll.vhd                          ; pll     ;
 ; pll/synthesis/submodules/pll_altpll_0.v ; yes             ; User Verilog HDL File  ; /personal/tmhans22/VGA/VGA/pll/synthesis/submodules/pll_altpll_0.v        ; pll     ;
 ; VGA.vhd                                 ; yes             ; User VHDL File         ; /personal/tmhans22/VGA/VGA/VGA.vhd                                        ;         ;
@@ -192,44 +198,47 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 244   ;
+; Estimated Total logic elements              ; 249   ;
 ;                                             ;       ;
-; Total combinational functions               ; 244   ;
+; Total combinational functions               ; 224   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 23    ;
-;     -- 3 input functions                    ; 123   ;
-;     -- <=2 input functions                  ; 98    ;
+;     -- 4 input functions                    ; 58    ;
+;     -- 3 input functions                    ; 76    ;
+;     -- <=2 input functions                  ; 90    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 72    ;
-;     -- arithmetic mode                      ; 172   ;
+;     -- normal mode                          ; 101   ;
+;     -- arithmetic mode                      ; 123   ;
 ;                                             ;       ;
-; Total registers                             ; 70    ;
-;     -- Dedicated logic registers            ; 70    ;
+; Total registers                             ; 106   ;
+;     -- Dedicated logic registers            ; 106   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 22    ;
+; I/O pins                                    ; 24    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Total PLLs                                  ; 1     ;
 ;     -- PLLs                                 ; 1     ;
 ;                                             ;       ;
-; Maximum fan-out                             ; 70    ;
-; Total fan-out                               ; 859   ;
-; Average fan-out                             ; 2.55  ;
+; Maximum fan-out                             ; 95    ;
+; Total fan-out                               ; 935   ;
+; Average fan-out                             ; 2.63  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
-; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
-; |VGA                          ; 244 (0)           ; 70 (0)       ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |VGA                                        ;              ;
-;    |SYNC:C1|                  ; 244 (244)         ; 70 (70)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1                                ;              ;
-;    |pll:C|                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C                                  ;              ;
-;       |pll_altpll_0:altpll_0| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C|pll_altpll_0:altpll_0            ;              ;
-;          |altpll:sd1|         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C|pll_altpll_0:altpll_0|altpll:sd1 ;              ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Library Name ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+--------------+
+; |VGA                                  ; 224 (0)           ; 106 (0)      ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |VGA                                                       ;              ;
+;    |SYNC:C1|                          ; 224 (161)         ; 106 (48)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1                                               ;              ;
+;       |ps2_keyboard:INST1|            ; 63 (21)           ; 58 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1                            ;              ;
+;          |debounce:debounce_ps2_clk|  ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk  ;              ;
+;          |debounce:debounce_ps2_data| ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data ;              ;
+;    |pll:C|                            ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C                                                 ;              ;
+;       |pll_altpll_0:altpll_0|         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C|pll_altpll_0:altpll_0                           ;              ;
+;          |altpll:sd1|                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C|pll_altpll_0:altpll_0|altpll:sd1                ;              ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -243,13 +252,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------------------+--------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                   ;
++----------------------------------------------------+-----------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                     ; Free of Timing Hazards ;
++----------------------------------------------------+-----------------------------------------+------------------------+
+; SYNC:C1|DEPRESSED                                  ; SYNC:C1|ps2_keyboard:INST1|ps2_code_new ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                                         ;                        ;
++----------------------------------------------------+-----------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +---------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                              ;
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; SYNC:C1|B[1..3]                        ; Merged with SYNC:C1|B[0]               ;
 ; SYNC:C1|G[0..3]                        ; Merged with SYNC:C1|B[0]               ;
+; SYNC:C1|B[1..3]                        ; Merged with SYNC:C1|B[0]               ;
 ; SYNC:C1|R[1..3]                        ; Merged with SYNC:C1|R[0]               ;
 ; pll:C|pll_altpll_0:altpll_0|prev_reset ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 11 ;                                        ;
@@ -261,12 +281,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 70    ;
-; Number of registers using Synchronous Clear  ; 22    ;
+; Total registers                              ; 106   ;
+; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 55    ;
+; Number of registers using Clock Enable       ; 53    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -276,40 +296,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; SYNC:C1|SQ_Y1[8]                        ; 3       ;
-; SYNC:C1|SQ_Y1[7]                        ; 3       ;
-; SYNC:C1|SQ_Y1[6]                        ; 3       ;
-; SYNC:C1|SQ_Y1[5]                        ; 3       ;
-; SYNC:C1|SQ_Y1[4]                        ; 3       ;
-; SYNC:C1|SQ_Y1[2]                        ; 4       ;
 ; SYNC:C1|SQ_X1[8]                        ; 3       ;
 ; SYNC:C1|SQ_X1[7]                        ; 3       ;
 ; SYNC:C1|SQ_X1[6]                        ; 3       ;
 ; SYNC:C1|SQ_X1[5]                        ; 3       ;
 ; SYNC:C1|SQ_X1[4]                        ; 3       ;
 ; SYNC:C1|SQ_X1[2]                        ; 4       ;
-; SYNC:C1|SQ_Y2[9]                        ; 3       ;
-; SYNC:C1|SQ_Y2[6]                        ; 3       ;
-; SYNC:C1|SQ_Y2[4]                        ; 3       ;
-; SYNC:C1|SQ_Y2[3]                        ; 3       ;
 ; SYNC:C1|SQ_X2[9]                        ; 3       ;
 ; SYNC:C1|SQ_X2[6]                        ; 3       ;
 ; SYNC:C1|SQ_X2[4]                        ; 3       ;
 ; SYNC:C1|SQ_X2[3]                        ; 3       ;
-; Total number of inverted registers = 20 ;         ;
+; Total number of inverted registers = 10 ;         ;
 +-----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |VGA|SYNC:C1|SQ_X2[0]      ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |VGA|SYNC:C1|SQ_Y1[3]      ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|SYNC:C1|SQ_X1[2]      ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|SYNC:C1|SQ_Y1[6]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|count_idle[8]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|counter_out[3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data|counter_out[4] ;
+; 128:1              ; 7 bits    ; 595 LEs       ; 0 LEs                ; 595 LEs                ; Yes        ; |VGA|SYNC:C1|SQ_X2[10]                                                    ;
+; 132:1              ; 5 bits    ; 440 LEs       ; 0 LEs                ; 440 LEs                ; Yes        ; |VGA|SYNC:C1|SQ_X1[9]                                                     ;
+; 128:1              ; 4 bits    ; 340 LEs       ; 0 LEs                ; 340 LEs                ; Yes        ; |VGA|SYNC:C1|SQ_X2[6]                                                     ;
+; 132:1              ; 6 bits    ; 528 LEs       ; 0 LEs                ; 528 LEs                ; Yes        ; |VGA|SYNC:C1|SQ_X1[5]                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
 +----------------------------------------------------+
@@ -704,6 +717,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1 ;
++-----------------------+----------+--------------------------------------+
+; Parameter Name        ; Value    ; Type                                 ;
++-----------------------+----------+--------------------------------------+
+; clk_freq              ; 50000000 ; Signed Integer                       ;
+; debounce_counter_size ; 8        ; Signed Integer                       ;
++-----------------------+----------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; counter_size   ; 8     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; counter_size   ; 8     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                           ;
 +-------------------------------+----------------------------------------+
@@ -737,7 +781,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -747,7 +791,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
-    Info: Processing started: Sat Dec  7 18:24:14 2019
+    Info: Processing started: Sat Dec  7 21:07:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /personal/tmhans22/VGA/Keyboard/debounce.vhd
@@ -773,7 +817,7 @@ Info (12021): Found 2 design units, including 0 entities, in source file pcg.vhd
     Info (12022): Found design unit 1: MY
     Info (12022): Found design unit 2: MY-body
 Info (12127): Elaborating entity "VGA" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at VGA.vhd(18): used implicit default value for signal "RESET" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at VGA.vhd(20): used implicit default value for signal "RESET" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "pll" for hierarchy "pll:C"
 Info (12128): Elaborating entity "pll_altpll_0" for hierarchy "pll:C|pll_altpll_0:altpll_0"
 Info (12128): Elaborating entity "pll_altpll_0_stdsync_sv6" for hierarchy "pll:C|pll_altpll_0:altpll_0|pll_altpll_0_stdsync_sv6:stdsync2"
@@ -806,19 +850,29 @@ Info (12133): Instantiated megafunction "pll:C|pll_altpll_0:altpll_0|altpll:sd1"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_type" = "altpll"
 Info (12128): Elaborating entity "SYNC" for hierarchy "SYNC:C1"
-Warning (10036): Verilog HDL or VHDL warning at Vhdl2.vhd(22): object "RGB" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Vhdl2.vhd(35): object "RGB" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at Vhdl2.vhd(53): signal "KEYBOARDIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Vhdl2.vhd(54): signal "KEYBOARDCODE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Vhdl2.vhd(49): inferring latch(es) for signal or variable "DEPRESSED", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "DEPRESSED" at Vhdl2.vhd(49)
+Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "SYNC:C1|ps2_keyboard:INST1"
+Info (12128): Elaborating entity "debounce" for hierarchy "SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK_24[1]"
-Info (21057): Implemented 267 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info (21057): Implemented 275 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 244 logic cells
+    Info (21061): Implemented 250 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 355 megabytes
-    Info: Processing ended: Sat Dec  7 18:24:18 2019
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 363 megabytes
+    Info: Processing ended: Sat Dec  7 21:07:39 2019
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
