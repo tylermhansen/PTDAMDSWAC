@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for VGA
-Sat Dec  7 21:07:53 2019
+Sat Dec  7 21:59:58 2019
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -1482,7 +1482,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
-    Info: Processing started: Sat Dec  7 21:07:51 2019
+    Info: Processing started: Sat Dec  7 21:59:56 2019
 Info: Command: quartus_sta VGA -c VGA
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1550,8 +1550,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 324 megabytes
-    Info: Processing ended: Sat Dec  7 21:07:53 2019
+    Info: Peak virtual memory: 313 megabytes
+    Info: Processing ended: Sat Dec  7 21:59:58 2019
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
