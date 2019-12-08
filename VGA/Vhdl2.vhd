@@ -31,20 +31,33 @@ COMPONENT ps2_keyboard IS
 	);
 END COMPONENT ps2_keyboard;
 
+COMPONENT player_sprite_straight_updated is
+port(
+X	: in INTEGER RANGE 0 TO 1688;
+Y	: in INTEGER RANGE 0 TO 1688;
+data : out std_logic_vector (11 downto 0)
+);
+END COMPONENT player_sprite_straight_updated;
+
 -----1280x1024 @ 60 Hz pixel clock 108 MHz
 SIGNAL RGB: STD_LOGIC_VECTOR(3 downto 0);
-SIGNAL SQ_X1,SQ_Y1: INTEGER RANGE 0 TO 1688:=500;
-SIGNAL SQ_X2,SQ_Y2: INTEGER RANGE 0 TO 1688:=600;
-SIGNAL DRAW1,DRAW2:STD_LOGIC:='0';
+SIGNAL SQ_X1: INTEGER RANGE 0 TO 1688:=408;
+SIGNAL SQ_Y1: INTEGER RANGE 0 TO 1688:=500;
+SIGNAL SKY_X: INTEGER RANGE 0 TO 1688:=408;
+SIGNAL SKY_Y: INTEGER RANGE 0 TO 1688:=0;
+SIGNAL CAR_X,CAR_Y: INTEGER RANGE 0 TO 1688:=1000;
+SIGNAL DRAW1,DRAWSKY,DRAWCAR:STD_LOGIC:='0';
 SIGNAL HPOS: INTEGER RANGE 0 TO 1688:=0;
 SIGNAL VPOS: INTEGER RANGE 0 TO 1066:=0;
 SIGNAL KEYBOARDIN : STD_LOGIC;
 SIGNAL DEPRESSED : STD_LOGIC := '0'; 
 SIGNAL KEYBOARDCODE: STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL CAR_DATA: STD_LOGIC_VECTOR(11 DOWNTO 0);
 
 BEGIN
 SQ(HPOS,VPOS,SQ_X1,SQ_Y1,RGB,DRAW1);
-SQ(HPOS,VPOS,SQ_X2,SQ_Y2,RGB,DRAW2);
+SKY(HPOS,VPOS,SKY_X,SKY_Y,RGB,DRAWSKY);
+CAR(HPOS,VPOS,CAR_X,CAR_Y,CAR_DATA,RGB,DRAWCAR);
 
 PROCESS(CLK)
 BEGIN
@@ -60,32 +73,26 @@ BEGIN
 	
 	IF(CLK'EVENT AND CLK='1')THEN
 			IF(DRAW1='1')THEN
-			  IF(S(0)='1')THEN
-				R<=(others=>'1');
-				G<=(others=>'0');
-				B<=(others=>'0');
-				ELSE
-				R<=(others=>'1');
+				R<=(others=>'0');
 				G<=(others=>'1');
-				B<=(others=>'1');
-				END IF;
-			END IF;
-			 IF(DRAW2='1')THEN
-			  IF(S(1)='1')THEN
-				R<=(others=>'1');
-				G<=(others=>'0');
 				B<=(others=>'0');
-				ELSE
-				R<=(others=>'1');
-				G<=(others=>'1');
-				B<=(others=>'1');
-			  END IF;
 			END IF;
-			IF (DRAW1='0' AND DRAW2='0')THEN
+			IF(DRAWSKY='1')THEN
+				R<=("0011");
+				G<=("1000");
+				B<=("1111");
+			END IF;
+			IF(DRAWCAR = '1')THEN
+				R<= CAR_DATA(11 downto 8);
+				G<= CAR_DATA(7 downto 4);
+				B<= CAR_DATA(3 downto 0);
+			END IF;
+			IF (DRAW1='0' AND DRAWSKY = '0' AND DRAWCAR ='0')THEN
 				R<=(others=>'0');
 				G<=(others=>'0');
 				B<=(others=>'0');
 			END IF;
+
 			IF(HPOS<1688)THEN
 			HPOS<=HPOS+1;
 			ELSE
@@ -94,38 +101,21 @@ BEGIN
 				  VPOS<=VPOS+1;
 				  ELSE
 				  VPOS<=0; 
-						IF(S(0)='1')THEN
 							IF DEPRESSED = '1' THEN -- if a key is being pressed down
 								CASE KEYBOARDCODE IS 
 									WHEN "00100011" => -- when its A, go right
-										SQ_X1<=SQ_X1+5;
+										CAR_X <= CAR_X + 5;
 									WHEN "00011100" => -- when its D, go left
-										SQ_X1<=SQ_X1-5;
+										CAR_X <= CAR_X - 5;
 									WHEN OTHERS => -- when its anything else, stay still 
-									SQ_X1<=SQ_X1;
-									SQ_Y1<=SQ_Y1;
+									CAR_X<=CAR_X;
+									CAR_Y<=CAR_Y;
 								END CASE;
 							ELSE -- if a key is not being pressed down, stay still 
-								SQ_X1<=SQ_X1;
-								SQ_Y1<=SQ_Y1;
+								CAR_X<=CAR_X;
+								CAR_Y<=CAR_Y;
 							END IF; 
-						END IF;
-						IF(S(1)='1')THEN
-							IF DEPRESSED = '1' THEN 	--if a key is being pressed down
-								 CASE KEYBOARDCODE IS 
-									WHEN "00100011" => -- when its A, go right
-										SQ_X2<=SQ_X2+5;
-									WHEN "00011100" => -- when its D, go left
-										SQ_X2<=SQ_X2-5;
-									WHEN OTHERS=> -- when its anything else, stay still 
-									SQ_X2<=SQ_X2;
-									SQ_Y2<=SQ_Y2;
-								END CASE; -- if a key is not being pressed down, stay still 
-							ELSE
-								SQ_X1<=SQ_X1;
-								SQ_Y1<=SQ_Y1;
-							END IF; 
-						END IF;  
+			
 					END IF;
 			END IF;
 		IF((HPOS>0 AND HPOS<408) OR (VPOS>0 AND VPOS<42))THEN
@@ -147,5 +137,6 @@ BEGIN
  END PROCESS;
  
  INST1: ps2_keyboard PORT MAP (CLK, KCLK, DATA, KEYBOARDIN, KEYBOARDCODE);
+ INST2l: player_sprite_straight_updated PORT MAP (HPOS - CAR_X, VPOS - CAR_Y, CAR_DATA);
  
  END MAIN;
