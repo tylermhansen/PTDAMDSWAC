@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sat Dec  7 23:41:35 2019
+Analysis & Synthesis Status : Successful - Sun Dec  8 12:48:46 2019
 Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
 Revision Name : VGA
 Top-level Entity Name : VGA
 Family : Cyclone II
-Total logic elements : 2,998
-    Total combinational functions : 2,973
-    Dedicated logic registers : 116
-Total registers : 116
+Total logic elements : 2,932
+    Total combinational functions : 2,907
+    Dedicated logic registers : 105
+Total registers : 105
 Total pins : 24
 Total virtual pins : 0
 Total memory bits : 0
