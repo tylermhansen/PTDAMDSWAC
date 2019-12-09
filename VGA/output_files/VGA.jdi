@@ -3,8 +3,8 @@
     <hash md5_digest_80b="00000000000000000000"/>
   </project>
   <file_info>
-    <file checksum="0x00725472" device="EP2C20F484C7" path="VGA.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x1D5E0C57" device="EPCS16" path="VGA.pof" usercode="0x00000000"/>
+    <file checksum="0x0070F33F" device="EP2C20F484C7" path="VGA.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x1D5A4600" device="EPCS16" path="VGA.pof" usercode="0x00000000"/>
   </file_info>
   <sld_infos>
     <sld_info hpath="pll:C" name="C">

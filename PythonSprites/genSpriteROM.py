@@ -33,7 +33,7 @@ def printStart( argv ): # this just handles all of the static starting prints
 	print('port(')
 	print('X	: in INTEGER RANGE 0 TO 1688;')
 	print('Y	: in INTEGER RANGE 0 TO 1688;')
-	print('data : out std_logic_vector (11 downto 0)')
+	print('data : out std_logic_vector (12 downto 0)')
 	print(');')
 	print('')
 	print('end entity;')

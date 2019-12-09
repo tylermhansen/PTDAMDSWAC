@@ -33,7 +33,7 @@ def printStart( argv ): # this just handles all of the static starting prints
 	print('port(')
 	print('X	: in INTEGER RANGE 0 TO 1688;')
 	print('Y	: in INTEGER RANGE 0 TO 1688;')
-	print('data : out std_logic_vector (11 downto 0)')
+	print('data : out std_logic_vector (12 downto 0)')
 	print(');')
 	print('')
 	print('end entity;')
@@ -61,11 +61,11 @@ def main( argv ):
 	while row < num_rows:
 		while col < num_cols:
 			(r, g, b) = src.getPixel(col, row)
-			if(r == 255) and (g == 255) and (b == 0):
+			if(r == 0) and (g == 0) and (b == 0):
 				draw =  "0"
 			else:
 				draw = "1"
-			pixelString += "\"" + dec2bin4(r/16) + dec2bin4(g/16) + dec2bin4(b/16) + draw + "\" when X = " + str(col) + " AND Y = " + str(row) + " else"    
+			pixelString = "\"" + dec2bin4(r/16) + dec2bin4(g/16) + dec2bin4(b/16) + draw + "\" when X = " + str(col) + " AND Y = " + str(row) + " else"    
 			print (pixelString)
 			col += 1
 		col = 0

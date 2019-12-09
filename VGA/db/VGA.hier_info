@@ -1242,6 +1242,7 @@ data[8] <= data.DB_MAX_OUTPUT_PORT_TYPE
 data[9] <= data.DB_MAX_OUTPUT_PORT_TYPE
 data[10] <= data.DB_MAX_OUTPUT_PORT_TYPE
 data[11] <= data.DB_MAX_OUTPUT_PORT_TYPE
+data[12] <= data.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |VGA|SYNC:C1|cloud:INST3
