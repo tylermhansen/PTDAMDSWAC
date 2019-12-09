@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun Dec  8 19:45:52 2019
+Fitter Status : Successful - Sun Dec  8 21:28:06 2019
 Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
 Revision Name : VGA
 Top-level Entity Name : VGA
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 4,477 / 18,752 ( 24 % )
-    Total combinational functions : 4,460 / 18,752 ( 24 % )
+Total logic elements : 4,505 / 18,752 ( 24 % )
+    Total combinational functions : 4,491 / 18,752 ( 24 % )
     Dedicated logic registers : 160 / 18,752 ( < 1 % )
 Total registers : 160
 Total pins : 24 / 315 ( 8 % )
