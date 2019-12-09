@@ -18,5 +18,4 @@ end entity;
 
 architecture rtl of cloud is
 begin
-data <= "0000000000000";
-end rtl;
+data <=

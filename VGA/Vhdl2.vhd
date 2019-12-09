@@ -43,7 +43,7 @@ COMPONENT cloud is
 port(
 X	: in INTEGER RANGE 0 TO 1688;
 Y	: in INTEGER RANGE 0 TO 1688;
-data : out std_logic_vector (11 downto 0)
+data : out std_logic_vector (12 downto 0)
 );
 END COMPONENT cloud;
 
@@ -78,7 +78,7 @@ SIGNAL KEYBOARDIN : STD_LOGIC;
 SIGNAL DEPRESSED : STD_LOGIC := '0'; 
 SIGNAL KEYBOARDCODE: STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL CAR_DATA: STD_LOGIC_VECTOR(12 DOWNTO 0);
-SIGNAL CLOUD_DATA: STD_LOGIC_VECTOR(11 DOWNTO 0);
+SIGNAL CLOUD_DATA: STD_LOGIC_VECTOR(12 DOWNTO 0);
 
 BEGIN
 SQ(HPOS,VPOS,SQ_X1,SQ_Y1,RGB,DRAW1);
@@ -176,14 +176,14 @@ BEGIN
 				B<=(others=>'1');
 			END IF;
 			IF(DRAWCAR = '1')THEN
-				R<= CAR_DATA(11 downto 8);
-				G<= CAR_DATA(7 downto 4);
-				B<= CAR_DATA(3 downto 0);
+				R<= CAR_DATA(12 downto 9);
+				G<= CAR_DATA(8 downto 5);
+				B<= CAR_DATA(4 downto 1);
 			END IF;
 			IF(DRAWCLOUD = '1')THEN
-				R<= CLOUD_DATA(11 downto 8);
-				G<= CLOUD_DATA(7 downto 4);
-				B<= CLOUD_DATA(3 downto 0);
+				R<= CLOUD_DATA(12 downto 9);
+				G<= CLOUD_DATA(8 downto 5);
+				B<= CLOUD_DATA(4 downto 1);
 			END IF;
 		
 			IF (DRAW1='0' AND DRAWSKY = '0' AND DRAWSKY2 ='0' AND DRAWLINE = '0' AND DRAWLINE2 = '0' AND DRAWCAR ='0' AND DRAWCLOUD ='0' AND DRAWDASH ='0' AND DRAWSKY3 = '0' AND DRAWSKY4 ='0' AND DRAWDASH2 = '0' AND DRAWDASH3 = '0' AND DRAWDASH4 ='0' AND DRAWDASH5='0')THEN
@@ -205,6 +205,10 @@ BEGIN
 									WHEN "00100011" => -- when its A, go right
 										CAR_X <= CAR_X + 5;
 									WHEN "00011100" => -- when its D, go left
+										CAR_X <= CAR_X - 5;
+									WHEN "01110100" => -- when its ->, go right
+										CAR_X <= CAR_X + 5;
+									WHEN "01101011" => -- when its <-, go left
 										CAR_X <= CAR_X - 5;
 									WHEN OTHERS => -- when its anything else, stay still 
 									CAR_X<=CAR_X;

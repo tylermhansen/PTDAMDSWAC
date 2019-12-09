@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Mon Dec  9 17:43:12 2019
+Mon Dec  9 18:00:09 2019
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -36,10 +36,9 @@ Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
  28. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div8
  29. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div9
  30. altpll Parameter Settings by Entity Instance
- 31. Port Connectivity Checks: "SYNC:C1|player_sprite_straight_updated:INST2l"
- 32. Port Connectivity Checks: "pll:C|pll_altpll_0:altpll_0"
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+ 31. Port Connectivity Checks: "pll:C|pll_altpll_0:altpll_0"
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -65,13 +64,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                   ;
 +------------------------------------+-------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec  9 17:43:12 2019     ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec  9 18:00:09 2019     ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; VGA                                       ;
 ; Top-level Entity Name              ; VGA                                       ;
 ; Family                             ; Cyclone II                                ;
-; Total logic elements               ; 6,967                                     ;
-;     Total combinational functions  ; 6,942                                     ;
+; Total logic elements               ; 4,621                                     ;
+;     Total combinational functions  ; 4,596                                     ;
 ;     Dedicated logic registers      ; 160                                       ;
 ; Total registers                    ; 160                                       ;
 ; Total pins                         ; 24                                        ;
@@ -222,17 +221,17 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 6,967 ;
+; Estimated Total logic elements              ; 4,621 ;
 ;                                             ;       ;
-; Total combinational functions               ; 6942  ;
+; Total combinational functions               ; 4596  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 4535  ;
-;     -- 3 input functions                    ; 1271  ;
-;     -- <=2 input functions                  ; 1136  ;
+;     -- 4 input functions                    ; 2631  ;
+;     -- 3 input functions                    ; 886   ;
+;     -- <=2 input functions                  ; 1079  ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 6037  ;
-;     -- arithmetic mode                      ; 905   ;
+;     -- normal mode                          ; 3706  ;
+;     -- arithmetic mode                      ; 890   ;
 ;                                             ;       ;
 ; Total registers                             ; 160   ;
 ;     -- Dedicated logic registers            ; 160   ;
@@ -244,8 +243,8 @@ applicable agreement for further details.
 ;     -- PLLs                                 ; 1     ;
 ;                                             ;       ;
 ; Maximum fan-out                             ; 149   ;
-; Total fan-out                               ; 24543 ;
-; Average fan-out                             ; 3.44  ;
+; Total fan-out                               ; 15631 ;
+; Average fan-out                             ; 3.27  ;
 +---------------------------------------------+-------+
 
 
@@ -254,9 +253,8 @@ applicable agreement for further details.
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Library Name ;
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
-; |VGA                                          ; 6942 (0)          ; 160 (0)      ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |VGA                                                                                                         ;              ;
-;    |SYNC:C1|                                  ; 6942 (2877)       ; 160 (102)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1                                                                                                 ;              ;
-;       |cloud:INST3|                           ; 2455 (2455)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|cloud:INST3                                                                                     ;              ;
+; |VGA                                          ; 4596 (0)          ; 160 (0)      ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |VGA                                                                                                         ;              ;
+;    |SYNC:C1|                                  ; 4596 (2927)       ; 160 (102)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1                                                                                                 ;              ;
 ;       |lpm_divide:Div0|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0                                                                                 ;              ;
 ;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0|lpm_divide_cem:auto_generated                                                   ;              ;
 ;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                       ;              ;
@@ -297,7 +295,7 @@ applicable agreement for further details.
 ;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9|lpm_divide_eem:auto_generated                                                   ;              ;
 ;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
 ;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
-;       |player_sprite_straight_updated:INST2l| ; 572 (572)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|player_sprite_straight_updated:INST2l                                                           ;              ;
+;       |player_sprite_straight_updated:INST2l| ; 631 (631)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|player_sprite_straight_updated:INST2l                                                           ;              ;
 ;       |ps2_keyboard:INST1|                    ; 63 (21)           ; 58 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1                                                                              ;              ;
 ;          |debounce:debounce_ps2_clk|          ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk                                                    ;              ;
 ;          |debounce:debounce_ps2_data|         ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data                                                   ;              ;
@@ -345,11 +343,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 160   ;
-; Number of registers using Synchronous Clear  ; 44    ;
-; Number of registers using Synchronous Load   ; 10    ;
+; Number of registers using Synchronous Clear  ; 34    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 107   ;
+; Number of registers using Clock Enable       ; 108   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -359,12 +357,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; SYNC:C1|CAR_X[9]                        ; 4       ;
-; SYNC:C1|CAR_X[8]                        ; 4       ;
-; SYNC:C1|CAR_X[7]                        ; 4       ;
+; SYNC:C1|CAR_X[3]                        ; 4       ;
 ; SYNC:C1|CAR_X[6]                        ; 4       ;
 ; SYNC:C1|CAR_X[5]                        ; 4       ;
-; SYNC:C1|CAR_X[3]                        ; 4       ;
+; SYNC:C1|CAR_X[7]                        ; 4       ;
+; SYNC:C1|CAR_X[8]                        ; 4       ;
+; SYNC:C1|CAR_X[9]                        ; 4       ;
 ; SYNC:C1|DASH2_Y[9]                      ; 10      ;
 ; SYNC:C1|DASH2_Y[5]                      ; 11      ;
 ; SYNC:C1|DASH2_Y[2]                      ; 10      ;
@@ -402,21 +400,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|count_idle[6]                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|counter_out[0]  ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|count_idle[9]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|counter_out[1]  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data|counter_out[7] ;
-; 128:1              ; 5 bits    ; 425 LEs       ; 0 LEs                ; 425 LEs                ; Yes        ; |VGA|SYNC:C1|CAR_X[2]                                                     ;
-; 1204:1             ; 2 bits    ; 1604 LEs      ; 1596 LEs             ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|R[3]                                                         ;
-; 1210:1             ; 5 bits    ; 4030 LEs      ; 4010 LEs             ; 20 LEs                 ; Yes        ; |VGA|SYNC:C1|R[0]                                                         ;
-; 1250:1             ; 3 bits    ; 2499 LEs      ; 2496 LEs             ; 3 LEs                  ; Yes        ; |VGA|SYNC:C1|R[1]                                                         ;
-; 128:1              ; 6 bits    ; 510 LEs       ; 0 LEs                ; 510 LEs                ; Yes        ; |VGA|SYNC:C1|CAR_X[3]                                                     ;
+; 126:1              ; 5 bits    ; 420 LEs       ; 0 LEs                ; 420 LEs                ; Yes        ; |VGA|SYNC:C1|CAR_X[4]                                                     ;
+; 1197:1             ; 2 bits    ; 1596 LEs      ; 1588 LEs             ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|G[3]                                                         ;
+; 1203:1             ; 2 bits    ; 1604 LEs      ; 1602 LEs             ; 2 LEs                  ; Yes        ; |VGA|SYNC:C1|G[2]                                                         ;
+; 1209:1             ; 4 bits    ; 3224 LEs      ; 3208 LEs             ; 16 LEs                 ; Yes        ; |VGA|SYNC:C1|B[1]                                                         ;
+; 1249:1             ; 3 bits    ; 2496 LEs      ; 2496 LEs             ; 0 LEs                  ; Yes        ; |VGA|SYNC:C1|G[1]                                                         ;
+; 126:1              ; 6 bits    ; 504 LEs       ; 0 LEs                ; 504 LEs                ; Yes        ; |VGA|SYNC:C1|CAR_X[9]                                                     ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; No         ; |VGA|SYNC:C1|player_sprite_straight_updated:INST2l|data                   ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |VGA|SYNC:C1|cloud:INST3|data                                             ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |VGA|SYNC:C1|cloud:INST3|data                                             ;
 ; 41:1               ; 2 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |VGA|SYNC:C1|player_sprite_straight_updated:INST2l|data                   ;
-; 2261:1             ; 4 bits    ; 6028 LEs      ; 6028 LEs             ; 0 LEs                  ; No         ; |VGA|SYNC:C1|cloud:INST3|data[7]                                          ;
-; 2297:1             ; 4 bits    ; 6124 LEs      ; 6124 LEs             ; 0 LEs                  ; No         ; |VGA|SYNC:C1|cloud:INST3|data[9]                                          ;
-; 2310:1             ; 2 bits    ; 3080 LEs      ; 3080 LEs             ; 0 LEs                  ; No         ; |VGA|SYNC:C1|cloud:INST3|data[1]                                          ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; No         ; |VGA|SYNC:C1|Add34                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
@@ -1090,15 +1085,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+----------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SYNC:C1|player_sprite_straight_updated:INST2l"                                          ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; data[12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "pll:C|pll_altpll_0:altpll_0"                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1115,7 +1101,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:24     ;
+; Top            ; 00:00:32     ;
 +----------------+--------------+
 
 
@@ -1125,7 +1111,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
-    Info: Processing started: Mon Dec  9 17:41:43 2019
+    Info: Processing started: Mon Dec  9 17:59:32 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /personal/tmhans22/VGA/Keyboard/debounce.vhd
@@ -1267,15 +1253,15 @@ Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 6993 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4647 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 6968 logic cells
+    Info (21061): Implemented 4622 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 422 megabytes
-    Info: Processing ended: Mon Dec  9 17:43:12 2019
-    Info: Elapsed time: 00:01:29
-    Info: Total CPU time (on all processors): 00:01:28
+    Info: Peak virtual memory: 380 megabytes
+    Info: Processing ended: Mon Dec  9 18:00:09 2019
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:36
 
 
