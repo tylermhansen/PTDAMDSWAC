@@ -3,27 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'C|altpll_0|sd1|pll|clk[0]'
-Slack : -36.349
-TNS   : -1148.047
+Slack : -34.508
+TNS   : -1139.149
 
 Type  : Slow Model Setup 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
-Slack : -2.152
-TNS   : -2.152
+Slack : -2.189
+TNS   : -2.189
 
 Type  : Slow Model Setup 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
-Slack : -0.255
-TNS   : -0.614
+Slack : -0.211
+TNS   : -0.359
 
 Type  : Slow Model Hold 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
-Slack : -1.139
-TNS   : -1.139
+Slack : -2.280
+TNS   : -2.280
 
 Type  : Slow Model Hold 'C|altpll_0|sd1|pll|clk[0]'
-Slack : 0.081
+Slack : 0.094
 TNS   : 0.000
 
 Type  : Slow Model Hold 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
-Slack : 0.429
+Slack : 0.440
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
@@ -43,24 +43,24 @@ Slack : 20.833
 TNS   : 0.000
 
 Type  : Fast Model Setup 'C|altpll_0|sd1|pll|clk[0]'
-Slack : -7.527
-TNS   : -154.622
+Slack : -6.922
+TNS   : -149.614
 
 Type  : Fast Model Setup 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
-Slack : -0.488
-TNS   : -0.488
+Slack : -0.512
+TNS   : -0.512
 
 Type  : Fast Model Setup 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
-Slack : 0.465
+Slack : 0.473
 TNS   : 0.000
 
 Type  : Fast Model Hold 'SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|result'
-Slack : -1.311
-TNS   : -1.311
+Slack : -1.729
+TNS   : -1.729
 
 Type  : Fast Model Hold 'SYNC:C1|ps2_keyboard:INST1|ps2_code_new'
-Slack : -0.118
-TNS   : -0.118
+Slack : -0.109
+TNS   : -0.109
 
 Type  : Fast Model Hold 'C|altpll_0|sd1|pll|clk[0]'
 Slack : 0.215
