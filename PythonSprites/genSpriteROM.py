@@ -57,15 +57,14 @@ def main( argv ):
 	num_cols = src.getWidth()
 	row = 0	
 	col = 0
-	pixelString = ''
 	while row < num_rows:
 		while col < num_cols:
 			(r, g, b) = src.getPixel(col, row)
-			pixelString += "\"" + dec2bin4(r/16) + dec2bin4(g/16) + dec2bin4(b/16) + "\" when X = " + str(col) + " AND Y = " + str(row) + " else "    
+			pixelString = "\"" + dec2bin4(r/16) + dec2bin4(g/16) + dec2bin4(b/16) + "\" when X = " + str(col) + " AND Y = " + str(row) + " else"    
+			print (pixelString)
 			col += 1
 		col = 0
 		row += 1
-	print (pixelString)
 	print ('"000000000000"; -- should never get here') 
 	print ("end rtl;")
 	f.close()
