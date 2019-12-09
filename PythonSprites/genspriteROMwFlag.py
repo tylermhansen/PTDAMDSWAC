@@ -62,9 +62,9 @@ def main( argv ):
 		while col < num_cols:
 			(r, g, b) = src.getPixel(col, row)
 			if(r == 255) and (g == 255) and (b == 0):
-				draw =  "1"
+				draw =  "0"
 			else:
-				draw = "0"
+				draw = "1"
 			pixelString += "\"" + dec2bin4(r/16) + dec2bin4(g/16) + dec2bin4(b/16) + draw + "\" when X = " + str(col) + " AND Y = " + str(row) + " else"    
 			print (pixelString)
 			col += 1
