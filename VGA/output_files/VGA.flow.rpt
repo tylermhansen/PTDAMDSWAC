@@ -1,5 +1,5 @@
 Flow report for VGA
-Mon Dec  9 18:00:49 2019
+Mon Dec  9 22:52:29 2019
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -38,21 +38,21 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Flow Summary                                                                   ;
 +------------------------------------+-------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec  9 18:00:49 2019     ;
+; Flow Status                        ; Successful - Mon Dec  9 22:52:29 2019     ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; VGA                                       ;
 ; Top-level Entity Name              ; VGA                                       ;
 ; Family                             ; Cyclone II                                ;
 ; Device                             ; EP2C20F484C7                              ;
 ; Timing Models                      ; Final                                     ;
-; Total logic elements               ; 4,612 / 18,752 ( 25 % )                   ;
-;     Total combinational functions  ; 4,596 / 18,752 ( 25 % )                   ;
-;     Dedicated logic registers      ; 160 / 18,752 ( < 1 % )                    ;
-; Total registers                    ; 160                                       ;
-; Total pins                         ; 24 / 315 ( 8 % )                          ;
+; Total logic elements               ; 8,429 / 18,752 ( 45 % )                   ;
+;     Total combinational functions  ; 8,400 / 18,752 ( 45 % )                   ;
+;     Dedicated logic registers      ; 217 / 18,752 ( 1 % )                      ;
+; Total registers                    ; 217                                       ;
+; Total pins                         ; 46 / 315 ( 15 % )                         ;
 ; Total virtual pins                 ; 0                                         ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                            ;
+; Embedded Multiplier 9-bit elements ; 2 / 52 ( 4 % )                            ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                            ;
 +------------------------------------+-------------------------------------------+
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/09/2019 17:59:33 ;
+; Start date & time ; 12/09/2019 22:49:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VGA                 ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------+---------------+--------------+----------------+
 ; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name  ; Section Id     ;
 +-------------------------------------+-------------------------------------------------------+---------------+--------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.157593237319866                                     ; --            ; --           ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.157594977520739                                     ; --            ; --           ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                  ; --            ; --           ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                ; <None>        ; --           ; --             ;
 ; IP_TOOL_ENV                         ; Qsys                                                  ; --            ; pll          ; --             ;
@@ -103,12 +103,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:36     ; 1.0                     ; 380 MB              ; 00:00:35                           ;
-; Fitter                    ; 00:00:28     ; 5.8                     ; 535 MB              ; 00:00:52                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 331 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 342 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 316 MB              ; 00:00:02                           ;
-; Total                     ; 00:01:10     ; --                      ; --                  ; 00:01:33                           ;
+; Analysis & Synthesis      ; 00:02:00     ; 1.0                     ; 431 MB              ; 00:01:59                           ;
+; Fitter                    ; 00:00:37     ; 5.5                     ; 561 MB              ; 00:01:12                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 343 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 388 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 342 MB              ; 00:00:03                           ;
+; Total                     ; 00:02:47     ; --                      ; --                  ; 00:03:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Mon Dec  9 18:00:09 2019
+Mon Dec  9 22:51:36 2019
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -13,32 +13,42 @@ Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for pll:C|pll_altpll_0:altpll_0
- 15. Source assignments for pll:C|pll_altpll_0:altpll_0|pll_altpll_0_stdsync_sv6:stdsync2|pll_altpll_0_dffpipe_l2c:dffpipe3
- 16. Parameter Settings for User Entity Instance: pll:C|pll_altpll_0:altpll_0|altpll:sd1
- 17. Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1
- 18. Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk
- 19. Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data
- 20. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div0
- 21. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div1
- 22. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div2
- 23. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div3
- 24. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div4
- 25. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div5
- 26. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div6
- 27. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div7
- 28. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div8
- 29. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div9
- 30. altpll Parameter Settings by Entity Instance
- 31. Port Connectivity Checks: "pll:C|pll_altpll_0:altpll_0"
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for pll:C|pll_altpll_0:altpll_0
+ 16. Source assignments for pll:C|pll_altpll_0:altpll_0|pll_altpll_0_stdsync_sv6:stdsync2|pll_altpll_0_dffpipe_l2c:dffpipe3
+ 17. Parameter Settings for User Entity Instance: pll:C|pll_altpll_0:altpll_0|altpll:sd1
+ 18. Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1
+ 19. Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk
+ 20. Parameter Settings for User Entity Instance: SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data
+ 21. Parameter Settings for User Entity Instance: SYNC:C1|LFSR:INST42
+ 22. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div6
+ 23. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div14
+ 24. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_mult:Mult0
+ 25. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div13
+ 26. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div5
+ 27. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div0
+ 28. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div1
+ 29. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div2
+ 30. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div3
+ 31. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div4
+ 32. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div8
+ 33. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div9
+ 34. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div10
+ 35. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div11
+ 36. Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div12
+ 37. altpll Parameter Settings by Entity Instance
+ 38. lpm_mult Parameter Settings by Entity Instance
+ 39. Port Connectivity Checks: "SYNC:C1|LFSR:INST42"
+ 40. Port Connectivity Checks: "SYNC:C1|cloud:INST4"
+ 41. Port Connectivity Checks: "pll:C|pll_altpll_0:altpll_0"
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
 
 
 
@@ -64,19 +74,19 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                   ;
 +------------------------------------+-------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec  9 18:00:09 2019     ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec  9 22:51:35 2019     ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; VGA                                       ;
 ; Top-level Entity Name              ; VGA                                       ;
 ; Family                             ; Cyclone II                                ;
-; Total logic elements               ; 4,621                                     ;
-;     Total combinational functions  ; 4,596                                     ;
-;     Dedicated logic registers      ; 160                                       ;
-; Total registers                    ; 160                                       ;
-; Total pins                         ; 24                                        ;
+; Total logic elements               ; 8,444                                     ;
+;     Total combinational functions  ; 8,400                                     ;
+;     Dedicated logic registers      ; 217                                       ;
+; Total registers                    ; 217                                       ;
+; Total pins                         ; 46                                        ;
 ; Total virtual pins                 ; 0                                         ;
 ; Total memory bits                  ; 0                                         ;
-; Embedded Multiplier 9-bit elements ; 0                                         ;
+; Embedded Multiplier 9-bit elements ; 2                                         ;
 ; Total PLLs                         ; 1                                         ;
 +------------------------------------+-------------------------------------------+
 
@@ -197,6 +207,8 @@ applicable agreement for further details.
 ; pcg.vhd                                             ; yes             ; User VHDL File               ; /personal/tmhans22/VGA/VGA/pcg.vhd                                          ;         ;
 ; ../PythonSprites/player_sprite_straight_updated.vhd ; yes             ; User VHDL File               ; /personal/tmhans22/VGA/PythonSprites/player_sprite_straight_updated.vhd     ;         ;
 ; ../PythonSprites/cloud.vhd                          ; yes             ; User VHDL File               ; /personal/tmhans22/VGA/PythonSprites/cloud.vhd                              ;         ;
+; output_files/LFSR.vhd                               ; yes             ; User VHDL File               ; /personal/tmhans22/VGA/VGA/output_files/LFSR.vhd                            ;         ;
+; ssdDriver.vhd                                       ; yes             ; User VHDL File               ; /personal/tmhans22/VGA/VGA/ssdDriver.vhd                                    ;         ;
 ; altpll.tdf                                          ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/altpll.tdf          ;         ;
 ; aglobal121.inc                                      ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/aglobal121.inc      ;         ;
 ; stratix_pll.inc                                     ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/stratix_pll.inc     ;         ;
@@ -205,14 +217,28 @@ applicable agreement for further details.
 ; lpm_divide.tdf                                      ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                                     ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc                                 ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; db/lpm_divide_cem.tdf                               ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/lpm_divide_cem.tdf                            ;         ;
-; db/sign_div_unsign_mlh.tdf                          ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/sign_div_unsign_mlh.tdf                       ;         ;
-; db/alt_u_div_e2f.tdf                                ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/alt_u_div_e2f.tdf                             ;         ;
+; db/lpm_divide_bem.tdf                               ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/lpm_divide_bem.tdf                            ;         ;
+; db/sign_div_unsign_llh.tdf                          ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/sign_div_unsign_llh.tdf                       ;         ;
+; db/alt_u_div_c2f.tdf                                ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/alt_u_div_c2f.tdf                             ;         ;
 ; db/add_sub_lkc.tdf                                  ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/add_sub_lkc.tdf                               ;         ;
 ; db/add_sub_mkc.tdf                                  ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/add_sub_mkc.tdf                               ;         ;
 ; db/lpm_divide_eem.tdf                               ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/lpm_divide_eem.tdf                            ;         ;
 ; db/sign_div_unsign_olh.tdf                          ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/sign_div_unsign_olh.tdf                       ;         ;
 ; db/alt_u_div_i2f.tdf                                ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/alt_u_div_i2f.tdf                             ;         ;
+; lpm_mult.tdf                                        ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
+; lpm_add_sub.inc                                     ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
+; multcore.inc                                        ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/multcore.inc        ;         ;
+; bypassff.inc                                        ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
+; altshift.inc                                        ; yes             ; Megafunction                 ; /export/opt/altera/12.1/quartus/libraries/megafunctions/altshift.inc        ;         ;
+; db/mult_b1t.tdf                                     ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/mult_b1t.tdf                                  ;         ;
+; db/lpm_divide_qto.tdf                               ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/lpm_divide_qto.tdf                            ;         ;
+; db/abs_divider_7dg.tdf                              ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/abs_divider_7dg.tdf                           ;         ;
+; db/alt_u_div_r5f.tdf                                ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/alt_u_div_r5f.tdf                             ;         ;
+; db/lpm_abs_1s9.tdf                                  ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/lpm_abs_1s9.tdf                               ;         ;
+; db/lpm_abs_2s9.tdf                                  ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/lpm_abs_2s9.tdf                               ;         ;
+; db/lpm_divide_cem.tdf                               ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/lpm_divide_cem.tdf                            ;         ;
+; db/sign_div_unsign_mlh.tdf                          ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/sign_div_unsign_mlh.tdf                       ;         ;
+; db/alt_u_div_e2f.tdf                                ; yes             ; Auto-Generated Megafunction  ; /personal/tmhans22/VGA/VGA/db/alt_u_div_e2f.tdf                             ;         ;
 +-----------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
 
 
@@ -221,89 +247,130 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 4,621 ;
+; Estimated Total logic elements              ; 8,444 ;
 ;                                             ;       ;
-; Total combinational functions               ; 4596  ;
+; Total combinational functions               ; 8400  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2631  ;
-;     -- 3 input functions                    ; 886   ;
-;     -- <=2 input functions                  ; 1079  ;
+;     -- 4 input functions                    ; 4826  ;
+;     -- 3 input functions                    ; 1804  ;
+;     -- <=2 input functions                  ; 1770  ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 3706  ;
-;     -- arithmetic mode                      ; 890   ;
+;     -- normal mode                          ; 7003  ;
+;     -- arithmetic mode                      ; 1397  ;
 ;                                             ;       ;
-; Total registers                             ; 160   ;
-;     -- Dedicated logic registers            ; 160   ;
+; Total registers                             ; 217   ;
+;     -- Dedicated logic registers            ; 217   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 24    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
+; I/O pins                                    ; 46    ;
+; Embedded Multiplier 9-bit elements          ; 2     ;
 ; Total PLLs                                  ; 1     ;
 ;     -- PLLs                                 ; 1     ;
 ;                                             ;       ;
-; Maximum fan-out                             ; 149   ;
-; Total fan-out                               ; 15631 ;
-; Average fan-out                             ; 3.27  ;
+; Maximum fan-out                             ; 206   ;
+; Total fan-out                               ; 28664 ;
+; Average fan-out                             ; 3.31  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                     ;
-+-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Library Name ;
-+-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
-; |VGA                                          ; 4596 (0)          ; 160 (0)      ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |VGA                                                                                                         ;              ;
-;    |SYNC:C1|                                  ; 4596 (2927)       ; 160 (102)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1                                                                                                 ;              ;
-;       |lpm_divide:Div0|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0                                                                                 ;              ;
-;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0|lpm_divide_cem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                       ;              ;
-;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider ;              ;
-;       |lpm_divide:Div1|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div1                                                                                 ;              ;
-;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div1|lpm_divide_cem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div1|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                       ;              ;
-;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div1|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider ;              ;
-;       |lpm_divide:Div2|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div2                                                                                 ;              ;
-;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div2|lpm_divide_cem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div2|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                       ;              ;
-;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div2|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider ;              ;
-;       |lpm_divide:Div3|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div3                                                                                 ;              ;
-;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div3|lpm_divide_cem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div3|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                       ;              ;
-;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div3|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider ;              ;
-;       |lpm_divide:Div4|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div4                                                                                 ;              ;
-;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div4|lpm_divide_cem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div4|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                       ;              ;
-;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div4|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider ;              ;
-;       |lpm_divide:Div5|                       ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div5                                                                                 ;              ;
-;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div5|lpm_divide_eem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div5|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
-;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div5|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
-;       |lpm_divide:Div6|                       ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div6                                                                                 ;              ;
-;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div6|lpm_divide_eem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div6|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
-;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div6|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
-;       |lpm_divide:Div7|                       ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div7                                                                                 ;              ;
-;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div7|lpm_divide_eem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div7|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
-;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div7|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
-;       |lpm_divide:Div8|                       ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div8                                                                                 ;              ;
-;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div8|lpm_divide_eem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div8|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
-;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div8|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
-;       |lpm_divide:Div9|                       ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9                                                                                 ;              ;
-;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9|lpm_divide_eem:auto_generated                                                   ;              ;
-;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
-;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
-;       |player_sprite_straight_updated:INST2l| ; 631 (631)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|player_sprite_straight_updated:INST2l                                                           ;              ;
-;       |ps2_keyboard:INST1|                    ; 63 (21)           ; 58 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1                                                                              ;              ;
-;          |debounce:debounce_ps2_clk|          ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk                                                    ;              ;
-;          |debounce:debounce_ps2_data|         ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data                                                   ;              ;
-;    |pll:C|                                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C                                                                                                   ;              ;
-;       |pll_altpll_0:altpll_0|                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C|pll_altpll_0:altpll_0                                                                             ;              ;
-;          |altpll:sd1|                         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C|pll_altpll_0:altpll_0|altpll:sd1                                                                  ;              ;
-+-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
+; |VGA                                          ; 8400 (0)          ; 217 (0)      ; 0           ; 2            ; 0       ; 1         ; 46   ; 0            ; |VGA                                                                                                          ;              ;
+;    |SYNC:C1|                                  ; 8386 (4365)       ; 217 (151)    ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |VGA|SYNC:C1                                                                                                  ;              ;
+;       |LFSR:INST42|                           ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|LFSR:INST42                                                                                      ;              ;
+;       |cloud:INST3|                           ; 1054 (1054)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|cloud:INST3                                                                                      ;              ;
+;       |lpm_divide:Div0|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0                                                                                  ;              ;
+;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0|lpm_divide_cem:auto_generated                                                    ;              ;
+;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                        ;              ;
+;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div0|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider  ;              ;
+;       |lpm_divide:Div10|                      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div10                                                                                 ;              ;
+;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div10|lpm_divide_eem:auto_generated                                                   ;              ;
+;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div10|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
+;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div10|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
+;       |lpm_divide:Div11|                      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div11                                                                                 ;              ;
+;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div11|lpm_divide_eem:auto_generated                                                   ;              ;
+;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div11|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
+;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div11|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
+;       |lpm_divide:Div12|                      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div12                                                                                 ;              ;
+;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div12|lpm_divide_eem:auto_generated                                                   ;              ;
+;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div12|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
+;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div12|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
+;       |lpm_divide:Div13|                      ; 499 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div13                                                                                 ;              ;
+;          |lpm_divide_qto:auto_generated|      ; 499 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div13|lpm_divide_qto:auto_generated                                                   ;              ;
+;             |abs_divider_7dg:divider|         ; 499 (22)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div13|lpm_divide_qto:auto_generated|abs_divider_7dg:divider                           ;              ;
+;                |alt_u_div_r5f:divider|        ; 453 (453)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div13|lpm_divide_qto:auto_generated|abs_divider_7dg:divider|alt_u_div_r5f:divider     ;              ;
+;                |lpm_abs_2s9:my_abs_num|       ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div13|lpm_divide_qto:auto_generated|abs_divider_7dg:divider|lpm_abs_2s9:my_abs_num    ;              ;
+;       |lpm_divide:Div14|                      ; 91 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div14                                                                                 ;              ;
+;          |lpm_divide_eem:auto_generated|      ; 91 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div14|lpm_divide_eem:auto_generated                                                   ;              ;
+;             |sign_div_unsign_olh:divider|     ; 91 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div14|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                       ;              ;
+;                |alt_u_div_i2f:divider|        ; 91 (91)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div14|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider ;              ;
+;       |lpm_divide:Div1|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div1                                                                                  ;              ;
+;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div1|lpm_divide_cem:auto_generated                                                    ;              ;
+;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div1|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                        ;              ;
+;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div1|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider  ;              ;
+;       |lpm_divide:Div2|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div2                                                                                  ;              ;
+;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div2|lpm_divide_cem:auto_generated                                                    ;              ;
+;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div2|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                        ;              ;
+;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div2|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider  ;              ;
+;       |lpm_divide:Div3|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div3                                                                                  ;              ;
+;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div3|lpm_divide_cem:auto_generated                                                    ;              ;
+;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div3|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                        ;              ;
+;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div3|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider  ;              ;
+;       |lpm_divide:Div4|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div4                                                                                  ;              ;
+;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div4|lpm_divide_cem:auto_generated                                                    ;              ;
+;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div4|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                        ;              ;
+;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div4|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider  ;              ;
+;       |lpm_divide:Div5|                       ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div5                                                                                  ;              ;
+;          |lpm_divide_cem:auto_generated|      ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div5|lpm_divide_cem:auto_generated                                                    ;              ;
+;             |sign_div_unsign_mlh:divider|     ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div5|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider                        ;              ;
+;                |alt_u_div_e2f:divider|        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div5|lpm_divide_cem:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider  ;              ;
+;       |lpm_divide:Div6|                       ; 95 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div6                                                                                  ;              ;
+;          |lpm_divide_bem:auto_generated|      ; 95 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div6|lpm_divide_bem:auto_generated                                                    ;              ;
+;             |sign_div_unsign_llh:divider|     ; 95 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div6|lpm_divide_bem:auto_generated|sign_div_unsign_llh:divider                        ;              ;
+;                |alt_u_div_c2f:divider|        ; 95 (95)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div6|lpm_divide_bem:auto_generated|sign_div_unsign_llh:divider|alt_u_div_c2f:divider  ;              ;
+;       |lpm_divide:Div8|                       ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div8                                                                                  ;              ;
+;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div8|lpm_divide_eem:auto_generated                                                    ;              ;
+;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div8|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                        ;              ;
+;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div8|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider  ;              ;
+;       |lpm_divide:Div9|                       ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9                                                                                  ;              ;
+;          |lpm_divide_eem:auto_generated|      ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9|lpm_divide_eem:auto_generated                                                    ;              ;
+;             |sign_div_unsign_olh:divider|     ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider                        ;              ;
+;                |alt_u_div_i2f:divider|        ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_divide:Div9|lpm_divide_eem:auto_generated|sign_div_unsign_olh:divider|alt_u_div_i2f:divider  ;              ;
+;       |lpm_mult:Mult0|                        ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_mult:Mult0                                                                                   ;              ;
+;          |mult_b1t:auto_generated|            ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |VGA|SYNC:C1|lpm_mult:Mult0|mult_b1t:auto_generated                                                           ;              ;
+;       |player_sprite_straight_updated:INST2l| ; 1146 (1146)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|player_sprite_straight_updated:INST2l                                                            ;              ;
+;       |ps2_keyboard:INST1|                    ; 63 (21)           ; 58 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1                                                                               ;              ;
+;          |debounce:debounce_ps2_clk|          ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk                                                     ;              ;
+;          |debounce:debounce_ps2_data|         ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data                                                    ;              ;
+;    |pll:C|                                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C                                                                                                    ;              ;
+;       |pll_altpll_0:altpll_0|                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C|pll_altpll_0:altpll_0                                                                              ;              ;
+;          |altpll:sd1|                         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|pll:C|pll_altpll_0:altpll_0|altpll:sd1                                                                   ;              ;
+;    |ssdDriver:C2|                             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|ssdDriver:C2                                                                                             ;              ;
+;    |ssdDriver:C3|                             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|ssdDriver:C3                                                                                             ;              ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 1           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 2           ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 0           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -332,8 +399,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
+; SYNC:C1|LFSR_ENABLE                    ; Stuck at VCC due to stuck port data_in ;
 ; pll:C|pll_altpll_0:altpll_0|prev_reset ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1  ;                                        ;
+; Total Number of Removed Registers = 2  ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -342,12 +410,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 160   ;
-; Number of registers using Synchronous Clear  ; 34    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 217   ;
+; Number of registers using Synchronous Clear  ; 46    ;
+; Number of registers using Synchronous Load   ; 12    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 108   ;
+; Number of registers using Clock Enable       ; 153   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -357,16 +425,30 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; SYNC:C1|CAR_X[3]                        ; 4       ;
-; SYNC:C1|CAR_X[6]                        ; 4       ;
-; SYNC:C1|CAR_X[5]                        ; 4       ;
-; SYNC:C1|CAR_X[7]                        ; 4       ;
-; SYNC:C1|CAR_X[8]                        ; 4       ;
-; SYNC:C1|CAR_X[9]                        ; 4       ;
+; SYNC:C1|COIN_Y[6]                       ; 19      ;
+; SYNC:C1|COIN_Y[4]                       ; 20      ;
+; SYNC:C1|COIN_Y[5]                       ; 20      ;
+; SYNC:C1|COIN_Y[2]                       ; 17      ;
+; SYNC:C1|COIN_Y[8]                       ; 17      ;
+; SYNC:C1|COIN_Y[7]                       ; 19      ;
+; SYNC:C1|COIN_X[10]                      ; 6       ;
+; SYNC:C1|CAR_X[9]                        ; 7       ;
+; SYNC:C1|CAR_X[8]                        ; 7       ;
+; SYNC:C1|CAR_X[7]                        ; 7       ;
+; SYNC:C1|CAR_X[6]                        ; 7       ;
+; SYNC:C1|CAR_X[5]                        ; 7       ;
+; SYNC:C1|COIN_X[4]                       ; 6       ;
+; SYNC:C1|CAR_X[3]                        ; 8       ;
+; SYNC:C1|COIN_X[3]                       ; 6       ;
+; SYNC:C1|COIN_X[1]                       ; 6       ;
+; SYNC:C1|INITCOIN_X[10]                  ; 4       ;
+; SYNC:C1|INITCOIN_X[4]                   ; 4       ;
+; SYNC:C1|INITCOIN_X[3]                   ; 4       ;
+; SYNC:C1|INITCOIN_X[1]                   ; 3       ;
 ; SYNC:C1|DASH2_Y[9]                      ; 10      ;
-; SYNC:C1|DASH2_Y[5]                      ; 11      ;
-; SYNC:C1|DASH2_Y[2]                      ; 10      ;
-; SYNC:C1|DASH2_Y[1]                      ; 5       ;
+; SYNC:C1|DASH2_Y[6]                      ; 11      ;
+; SYNC:C1|DASH2_Y[4]                      ; 11      ;
+; SYNC:C1|DASH2_Y[3]                      ; 11      ;
 ; SYNC:C1|DASH_Y[8]                       ; 10      ;
 ; SYNC:C1|DASH_Y[7]                       ; 11      ;
 ; SYNC:C1|DASH_Y[6]                       ; 11      ;
@@ -376,22 +458,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; SYNC:C1|DASH5_Y[9]                      ; 10      ;
 ; SYNC:C1|DASH5_Y[8]                      ; 10      ;
 ; SYNC:C1|DASH5_Y[7]                      ; 11      ;
-; SYNC:C1|DASH5_Y[6]                      ; 11      ;
-; SYNC:C1|DASH5_Y[3]                      ; 11      ;
 ; SYNC:C1|DASH5_Y[2]                      ; 10      ;
-; SYNC:C1|DASH5_Y[1]                      ; 5       ;
-; SYNC:C1|DASH5_Y[0]                      ; 4       ;
 ; SYNC:C1|DASH3_Y[9]                      ; 10      ;
-; SYNC:C1|DASH3_Y[6]                      ; 11      ;
+; SYNC:C1|DASH3_Y[7]                      ; 11      ;
 ; SYNC:C1|DASH3_Y[5]                      ; 11      ;
 ; SYNC:C1|DASH3_Y[4]                      ; 11      ;
-; SYNC:C1|DASH3_Y[0]                      ; 4       ;
+; SYNC:C1|DASH3_Y[3]                      ; 11      ;
+; SYNC:C1|DASH3_Y[2]                      ; 10      ;
 ; SYNC:C1|DASH4_Y[9]                      ; 10      ;
 ; SYNC:C1|DASH4_Y[8]                      ; 10      ;
-; SYNC:C1|DASH4_Y[2]                      ; 10      ;
-; SYNC:C1|DASH4_Y[1]                      ; 5       ;
-; SYNC:C1|DASH4_Y[0]                      ; 4       ;
-; Total number of inverted registers = 34 ;         ;
+; SYNC:C1|DASH4_Y[5]                      ; 11      ;
+; SYNC:C1|LASTCOIN_X[1]                   ; 1       ;
+; SYNC:C1|LASTCOIN_X[3]                   ; 1       ;
+; SYNC:C1|LASTCOIN_X[4]                   ; 1       ;
+; SYNC:C1|LASTCOIN_X[10]                  ; 1       ;
+; Total number of inverted registers = 47 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -400,18 +481,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|count_idle[9]                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|counter_out[1]  ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|count_idle[4]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk|counter_out[7]  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_data|counter_out[7] ;
-; 126:1              ; 5 bits    ; 420 LEs       ; 0 LEs                ; 420 LEs                ; Yes        ; |VGA|SYNC:C1|CAR_X[4]                                                     ;
-; 1197:1             ; 2 bits    ; 1596 LEs      ; 1588 LEs             ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|G[3]                                                         ;
-; 1203:1             ; 2 bits    ; 1604 LEs      ; 1602 LEs             ; 2 LEs                  ; Yes        ; |VGA|SYNC:C1|G[2]                                                         ;
-; 1209:1             ; 4 bits    ; 3224 LEs      ; 3208 LEs             ; 16 LEs                 ; Yes        ; |VGA|SYNC:C1|B[1]                                                         ;
-; 1249:1             ; 3 bits    ; 2496 LEs      ; 2496 LEs             ; 0 LEs                  ; Yes        ; |VGA|SYNC:C1|G[1]                                                         ;
-; 126:1              ; 6 bits    ; 504 LEs       ; 0 LEs                ; 504 LEs                ; Yes        ; |VGA|SYNC:C1|CAR_X[9]                                                     ;
+; 126:1              ; 2 bits    ; 168 LEs       ; 0 LEs                ; 168 LEs                ; Yes        ; |VGA|SYNC:C1|CAR_X[4]                                                     ;
+; 3459:1             ; 2 bits    ; 4612 LEs      ; 4602 LEs             ; 10 LEs                 ; Yes        ; |VGA|SYNC:C1|R[3]                                                         ;
+; 3465:1             ; 2 bits    ; 4620 LEs      ; 4616 LEs             ; 4 LEs                  ; Yes        ; |VGA|SYNC:C1|G[2]                                                         ;
+; 3520:1             ; 2 bits    ; 4692 LEs      ; 4684 LEs             ; 8 LEs                  ; Yes        ; |VGA|SYNC:C1|B[1]                                                         ;
+; 3547:1             ; 2 bits    ; 4728 LEs      ; 4726 LEs             ; 2 LEs                  ; Yes        ; |VGA|SYNC:C1|R[0]                                                         ;
+; 126:1              ; 6 bits    ; 504 LEs       ; 0 LEs                ; 504 LEs                ; Yes        ; |VGA|SYNC:C1|CAR_X[6]                                                     ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; No         ; |VGA|SYNC:C1|player_sprite_straight_updated:INST2l|data                   ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |VGA|SYNC:C1|cloud:INST3|data                                             ;
 ; 41:1               ; 2 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |VGA|SYNC:C1|player_sprite_straight_updated:INST2l|data                   ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; No         ; |VGA|SYNC:C1|Add34                                                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; No         ; |VGA|SYNC:C1|Add50                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
@@ -838,6 +920,143 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SYNC:C1|LFSR:INST42 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; g_Num_Bits     ; 8     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div6 ;
++------------------------+----------------+--------------------------------+
+; Parameter Name         ; Value          ; Type                           ;
++------------------------+----------------+--------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                        ;
+; CBXI_PARAMETER         ; lpm_divide_bem ; Untyped                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                 ;
++------------------------+----------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div14 ;
++------------------------+----------------+---------------------------------+
+; Parameter Name         ; Value          ; Type                            ;
++------------------------+----------------+---------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                         ;
+; LPM_WIDTHD             ; 7              ; Untyped                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                         ;
+; CBXI_PARAMETER         ; lpm_divide_eem ; Untyped                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                  ;
++------------------------+----------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_mult:Mult0           ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 12         ; Untyped             ;
+; LPM_WIDTHB                                     ; 12         ; Untyped             ;
+; LPM_WIDTHP                                     ; 24         ; Untyped             ;
+; LPM_WIDTHR                                     ; 24         ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Untyped             ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_b1t   ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div13 ;
++------------------------+----------------+---------------------------------+
+; Parameter Name         ; Value          ; Type                            ;
++------------------------+----------------+---------------------------------+
+; LPM_WIDTHN             ; 25             ; Untyped                         ;
+; LPM_WIDTHD             ; 15             ; Untyped                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                         ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                         ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                         ;
+; CBXI_PARAMETER         ; lpm_divide_qto ; Untyped                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                  ;
++------------------------+----------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div5 ;
++------------------------+----------------+--------------------------------+
+; Parameter Name         ; Value          ; Type                           ;
++------------------------+----------------+--------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                        ;
+; LPM_WIDTHD             ; 5              ; Untyped                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                        ;
+; CBXI_PARAMETER         ; lpm_divide_cem ; Untyped                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                 ;
++------------------------+----------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div0 ;
 +------------------------+----------------+--------------------------------+
@@ -954,75 +1173,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div5 ;
-+------------------------+----------------+--------------------------------+
-; Parameter Name         ; Value          ; Type                           ;
-+------------------------+----------------+--------------------------------+
-; LPM_WIDTHN             ; 11             ; Untyped                        ;
-; LPM_WIDTHD             ; 7              ; Untyped                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                        ;
-; CBXI_PARAMETER         ; lpm_divide_eem ; Untyped                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                 ;
-+------------------------+----------------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div6 ;
-+------------------------+----------------+--------------------------------+
-; Parameter Name         ; Value          ; Type                           ;
-+------------------------+----------------+--------------------------------+
-; LPM_WIDTHN             ; 11             ; Untyped                        ;
-; LPM_WIDTHD             ; 7              ; Untyped                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                        ;
-; CBXI_PARAMETER         ; lpm_divide_eem ; Untyped                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                 ;
-+------------------------+----------------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div7 ;
-+------------------------+----------------+--------------------------------+
-; Parameter Name         ; Value          ; Type                           ;
-+------------------------+----------------+--------------------------------+
-; LPM_WIDTHN             ; 11             ; Untyped                        ;
-; LPM_WIDTHD             ; 7              ; Untyped                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                        ;
-; CBXI_PARAMETER         ; lpm_divide_eem ; Untyped                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                 ;
-+------------------------+----------------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div8 ;
 +------------------------+----------------+--------------------------------+
 ; Parameter Name         ; Value          ; Type                           ;
@@ -1068,6 +1218,75 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div10 ;
++------------------------+----------------+---------------------------------+
+; Parameter Name         ; Value          ; Type                            ;
++------------------------+----------------+---------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                         ;
+; LPM_WIDTHD             ; 7              ; Untyped                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                         ;
+; CBXI_PARAMETER         ; lpm_divide_eem ; Untyped                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                  ;
++------------------------+----------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div11 ;
++------------------------+----------------+---------------------------------+
+; Parameter Name         ; Value          ; Type                            ;
++------------------------+----------------+---------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                         ;
+; LPM_WIDTHD             ; 7              ; Untyped                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                         ;
+; CBXI_PARAMETER         ; lpm_divide_eem ; Untyped                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                  ;
++------------------------+----------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SYNC:C1|lpm_divide:Div12 ;
++------------------------+----------------+---------------------------------+
+; Parameter Name         ; Value          ; Type                            ;
++------------------------+----------------+---------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                         ;
+; LPM_WIDTHD             ; 7              ; Untyped                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                         ;
+; CBXI_PARAMETER         ; lpm_divide_eem ; Untyped                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                  ;
++------------------------+----------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                           ;
 +-------------------------------+----------------------------------------+
@@ -1083,6 +1302,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- VCO_MULTIPLY_BY        ; 0                                      ;
 ;     -- VCO_DIVIDE_BY          ; 0                                      ;
 +-------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                 ;
++---------------------------------------+------------------------+
+; Name                                  ; Value                  ;
++---------------------------------------+------------------------+
+; Number of entity instances            ; 1                      ;
+; Entity Instance                       ; SYNC:C1|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 12                     ;
+;     -- LPM_WIDTHB                     ; 12                     ;
+;     -- LPM_WIDTHP                     ; 24                     ;
+;     -- LPM_REPRESENTATION             ; SIGNED                 ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                     ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                     ;
+;     -- USE_EAB                        ; OFF                    ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                   ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                     ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                     ;
++---------------------------------------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SYNC:C1|LFSR:INST42"                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; i_seed_dv         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_seed_data[6..5] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_seed_data[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_seed_data[7]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_seed_data[4]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_seed_data[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_seed_data[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_lfsr_done       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SYNC:C1|cloud:INST4"                                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -1101,7 +1365,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:32     ;
+; Top            ; 00:01:55     ;
 +----------------+--------------+
 
 
@@ -1111,7 +1375,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
-    Info: Processing started: Mon Dec  9 17:59:32 2019
+    Info: Processing started: Mon Dec  9 22:49:34 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /personal/tmhans22/VGA/Keyboard/debounce.vhd
@@ -1142,8 +1406,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file /person
 Info (12021): Found 2 design units, including 1 entities, in source file /personal/tmhans22/VGA/PythonSprites/cloud.vhd
     Info (12022): Found design unit 1: cloud-rtl
     Info (12023): Found entity 1: cloud
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/LFSR.vhd
+    Info (12022): Found design unit 1: LFSR-RTL
+    Info (12023): Found entity 1: LFSR
+Info (12021): Found 2 design units, including 1 entities, in source file ssdDriver.vhd
+    Info (12022): Found design unit 1: ssdDriver-rtl
+    Info (12023): Found entity 1: ssdDriver
 Info (12127): Elaborating entity "VGA" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at VGA.vhd(20): used implicit default value for signal "RESET" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at VGA.vhd(23): used implicit default value for signal "RESET" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "pll" for hierarchy "pll:C"
 Info (12128): Elaborating entity "pll_altpll_0" for hierarchy "pll:C|pll_altpll_0:altpll_0"
 Info (12128): Elaborating entity "pll_altpll_0_stdsync_sv6" for hierarchy "pll:C|pll_altpll_0:altpll_0|pll_altpll_0_stdsync_sv6:stdsync2"
@@ -1176,63 +1446,78 @@ Info (12133): Instantiated megafunction "pll:C|pll_altpll_0:altpll_0|altpll:sd1"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_type" = "altpll"
 Info (12128): Elaborating entity "SYNC" for hierarchy "SYNC:C1"
-Warning (10036): Verilog HDL or VHDL warning at Vhdl2.vhd(51): object "RGB" assigned a value but never read
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(52): used explicit default value for signal "SQ_X1" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(53): used explicit default value for signal "SQ_Y1" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(54): used explicit default value for signal "SKY_X" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(55): used explicit default value for signal "SKY_Y" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(56): used explicit default value for signal "DASH_X" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(56): used explicit default value for signal "DASH2_X" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(56): used explicit default value for signal "DASH3_X" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(56): used explicit default value for signal "DASH4_X" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(56): used explicit default value for signal "DASH5_X" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(64): used explicit default value for signal "CLOUD_X" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(65): used explicit default value for signal "CLOUD_Y" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(66): used explicit default value for signal "LINE_X1" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(67): used explicit default value for signal "LINE_Y1" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(68): used explicit default value for signal "LINE_X2" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(69): used explicit default value for signal "LINE_Y2" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(70): used explicit default value for signal "LINE2_X1" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(71): used explicit default value for signal "LINE2_Y1" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(72): used explicit default value for signal "LINE2_X2" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(73): used explicit default value for signal "LINE2_Y2" because signal was never assigned a value
-Warning (10492): VHDL Process Statement warning at Vhdl2.vhd(104): signal "KEYBOARDIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Vhdl2.vhd(105): signal "KEYBOARDCODE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at Vhdl2.vhd(100): inferring latch(es) for signal or variable "DEPRESSED", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "DEPRESSED" at Vhdl2.vhd(100)
+Warning (10036): Verilog HDL or VHDL warning at Vhdl2.vhd(68): object "RGB" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(69): used explicit default value for signal "SQ_X1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(70): used explicit default value for signal "SQ_Y1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(71): used explicit default value for signal "SKY_X" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(72): used explicit default value for signal "SKY_Y" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(73): used explicit default value for signal "DASH_X" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(73): used explicit default value for signal "DASH2_X" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(73): used explicit default value for signal "DASH3_X" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(73): used explicit default value for signal "DASH4_X" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(73): used explicit default value for signal "DASH5_X" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(82): used explicit default value for signal "CLOUD_X" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(83): used explicit default value for signal "CLOUD_Y" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(84): used explicit default value for signal "CLOUD2_X" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(85): used explicit default value for signal "CLOUD2_Y" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(86): used explicit default value for signal "LINE_X1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(87): used explicit default value for signal "LINE_Y1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(88): used explicit default value for signal "LINE_X2" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(89): used explicit default value for signal "LINE_Y2" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(90): used explicit default value for signal "LINE2_X1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(91): used explicit default value for signal "LINE2_Y1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(92): used explicit default value for signal "LINE2_X2" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(93): used explicit default value for signal "LINE2_Y2" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at Vhdl2.vhd(101): object "CLOUD_DATA2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Vhdl2.vhd(103): object "LFSR_FINISHED" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(104): used explicit default value for signal "LFSR_SEEDYES" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Vhdl2.vhd(105): used explicit default value for signal "LFSR_SEED" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at Vhdl2.vhd(133): signal "KEYBOARDIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Vhdl2.vhd(134): signal "KEYBOARDCODE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Vhdl2.vhd(141): signal "BOOMBOOMS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Vhdl2.vhd(142): signal "DETECTHIT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Vhdl2.vhd(128): inferring latch(es) for signal or variable "DEPRESSED", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "DEPRESSED" at Vhdl2.vhd(128)
 Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "SYNC:C1|ps2_keyboard:INST1"
 Info (12128): Elaborating entity "debounce" for hierarchy "SYNC:C1|ps2_keyboard:INST1|debounce:debounce_ps2_clk"
 Info (12128): Elaborating entity "player_sprite_straight_updated" for hierarchy "SYNC:C1|player_sprite_straight_updated:INST2l"
 Info (12128): Elaborating entity "cloud" for hierarchy "SYNC:C1|cloud:INST3"
-Info (278001): Inferred 10 megafunctions from design logic
+Info (12128): Elaborating entity "LFSR" for hierarchy "SYNC:C1|LFSR:INST42"
+Info (12128): Elaborating entity "ssdDriver" for hierarchy "ssdDriver:C2"
+Info (278001): Inferred 15 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div6"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div14"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "SYNC:C1|Mult0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div13"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div5"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div2"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div3"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div4"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div5"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div6"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div7"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div8"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div9"
-Info (12130): Elaborated megafunction instantiation "SYNC:C1|lpm_divide:Div0"
-Info (12133): Instantiated megafunction "SYNC:C1|lpm_divide:Div0" with the following parameter:
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div10"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div11"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SYNC:C1|Div12"
+Info (12130): Elaborated megafunction instantiation "SYNC:C1|lpm_divide:Div6"
+Info (12133): Instantiated megafunction "SYNC:C1|lpm_divide:Div6" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "11"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_cem.tdf
-    Info (12023): Found entity 1: lpm_divide_cem
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_mlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_mlh
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_e2f.tdf
-    Info (12023): Found entity 1: alt_u_div_e2f
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bem.tdf
+    Info (12023): Found entity 1: lpm_divide_bem
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_llh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_llh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_c2f.tdf
+    Info (12023): Found entity 1: alt_u_div_c2f
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
     Info (12023): Found entity 1: add_sub_lkc
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
     Info (12023): Found entity 1: add_sub_mkc
-Info (12130): Elaborated megafunction instantiation "SYNC:C1|lpm_divide:Div5"
-Info (12133): Instantiated megafunction "SYNC:C1|lpm_divide:Div5" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "SYNC:C1|lpm_divide:Div14"
+Info (12133): Instantiated megafunction "SYNC:C1|lpm_divide:Div14" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "11"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1243,6 +1528,54 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_olh
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_i2f.tdf
     Info (12023): Found entity 1: alt_u_div_i2f
+Info (12130): Elaborated megafunction instantiation "SYNC:C1|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "SYNC:C1|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "12"
+    Info (12134): Parameter "LPM_WIDTHB" = "12"
+    Info (12134): Parameter "LPM_WIDTHP" = "24"
+    Info (12134): Parameter "LPM_WIDTHR" = "24"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_b1t.tdf
+    Info (12023): Found entity 1: mult_b1t
+Info (12130): Elaborated megafunction instantiation "SYNC:C1|lpm_divide:Div13"
+Info (12133): Instantiated megafunction "SYNC:C1|lpm_divide:Div13" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "25"
+    Info (12134): Parameter "LPM_WIDTHD" = "15"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_qto.tdf
+    Info (12023): Found entity 1: lpm_divide_qto
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_7dg.tdf
+    Info (12023): Found entity 1: abs_divider_7dg
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_r5f.tdf
+    Info (12023): Found entity 1: alt_u_div_r5f
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_1s9.tdf
+    Info (12023): Found entity 1: lpm_abs_1s9
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_2s9.tdf
+    Info (12023): Found entity 1: lpm_abs_2s9
+Info (12130): Elaborated megafunction instantiation "SYNC:C1|lpm_divide:Div5"
+Info (12133): Instantiated megafunction "SYNC:C1|lpm_divide:Div5" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_cem.tdf
+    Info (12023): Found entity 1: lpm_divide_cem
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_mlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_mlh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_e2f.tdf
+    Info (12023): Found entity 1: alt_u_div_e2f
+Info (12130): Elaborated megafunction instantiation "SYNC:C1|lpm_divide:Div8"
+Info (12133): Instantiated megafunction "SYNC:C1|lpm_divide:Div8" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 7 input pin(s) that do not drive logic
@@ -1253,15 +1586,16 @@ Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 4647 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 8494 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 4622 logic cells
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 8445 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 380 megabytes
-    Info: Processing ended: Mon Dec  9 18:00:09 2019
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:00:36
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 431 megabytes
+    Info: Processing ended: Mon Dec  9 22:51:36 2019
+    Info: Elapsed time: 00:02:02
+    Info: Total CPU time (on all processors): 00:02:00
 
 
